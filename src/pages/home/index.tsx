@@ -102,7 +102,7 @@ export const Home = () => {
     try {
       const canvas = canvasRef.current;
       if (canvas) {
-        const resp = await axios.post(`http://localhost:3000/calculate`, {
+        const resp = await axios.post(`https://icompute-backend.onrender.com/calculate`, {
           image: canvas?.toDataURL("image/png"),
           dict_of_vars: dictOfVars,
         });
